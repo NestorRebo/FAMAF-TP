@@ -1,0 +1,80 @@
+/* Estilo general de la pagina */
+body {
+    font-family:'Courier New', Courier, monospace;
+    /* agergue una imagen de fondo */
+    background-image: url(https://image.freepik.com/vector-gratis/fondo-pizarra-matematicas_1995-357.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para el título */
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 4px 4px 5px gray;
+}
+
+/* estilo del cuadro de la calculadora */
+.main {
+    background-color:#9e9e9cea;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+select{
+    color: #d6b004;
+}
+
+/*estilo de los cuadros de input*/
+input[type="number"], select, button {
+    display: block;
+    color: aliceblue;
+    background-color: black;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #268ca5;
+    border-radius: 15px;
+    font-size: 22px;
+}
+
+
+
+/* estilo del boton Calcular*/
+button.calcular {
+    background-color:#f88f06;
+    color: white;
+    cursor: pointer;
+}
+button.calcular:hover {
+    background-color: #fdad00;
+}
+/* estilo para el boton Limpiar*/
+
+button.borrar {
+    background-color: #0db95ac7;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    font-size: 80%;
+}
+button.borrar:hover {
+    background-color: #eb5e28;
+}
+
+/* Estilo para el resultado */
+p#Resultado {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0003b9;
+}

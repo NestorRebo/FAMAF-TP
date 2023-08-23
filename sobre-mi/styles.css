@@ -1,0 +1,66 @@
+.contenido {
+    /* con  podemos referenciar a las clases que 
+    se agregan en el HTML */
+
+    color: rgba(191, 224, 255, 0.897);
+    background-color: rgb(18, 29, 77);
+    border: 1px solid #948a8a; 
+    margin: 10px;
+    font-family: Arial, sans-serif; /* Cambiar a cualquier fuente disponible en el sistema o en línea */
+    border-radius: 2%;
+
+    
+}
+
+.Titulo {
+    background-color: rgb(24, 33, 88);
+    color: rgb(248, 248, 248);
+    font-family: 'Lucida Sans', sans-serif; /* Cambiar a cualquier fuente disponible en el sistema o en línea */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#video {
+    /* con # podemos referenciar a las id que 
+    se agregan en el HTML */
+    background-color: black;
+    width: 100vh;
+   
+}
+
+#img {
+
+    height: 150px;
+    width: 120px;
+    border-radius: 100%;
+   
+}
+
+/* sino colocamos nada ya es general */
+h1 {
+    padding: 1%;
+    margin: 10px; /*Puedes utilizar diferentes unidades y valores para  */
+
+}
+
+h2 {
+    padding: 1%;
+    margin: 1px
+}
+
+p{
+    padding: 1%;
+}
+
+nav {
+    font-family: Arial, sans-serif; /* Cambiar a cualquier fuente disponible en el sistema o en línea */
+
+}
+
+ul {
+    font-family: Arial, sans-serif; /* Cambiar a cualquier fuente disponible en el sistema o en línea */
+
+}
