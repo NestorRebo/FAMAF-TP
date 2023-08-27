@@ -2,55 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" class="css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" class="css" />
 </head>
 
 <body class="container">
-    <h1 class="titulo">Piedra, Papel o Tijera</h1>
+  <h1 class="titulo">Piedra, Papel o Tijera</h1>
 
-    <div>
-        <input type="text" id="nombreUsuario" placeholder="Ingrese usuario">
-        <button id="botonIniciar">Iniciar Partida</button>
-        <p id="saludoUsuario"></p>
-    </div>
+  <div id="portada">
+    <input type="text" id="nombreUsuario" placeholder="Ingrese usuario" />
+    <button id="botonIniciar">Iniciar Partida</button>
 
+    <ul class="text-center">
+      <li class="listado">
+        El juego es el usuario y la computadora.
+      </li>
+      <li class="listado">
+        Cada jugador elige una de las tres opciones: piedra, papel o tijera.
+      </li>
+      <li class="listado">
+        PIEDRA le gana a TIJERA / TIJERA le gana a PAPEL / PAPEL le gana a
+        PIEDRA.
+      </li>
+      <li class="listado">
+        Si ambos jugadores eligen la misma opción, la ronda termina en empate
+        y se vuelve a jugar.
+      </li>
+      <li class="listado">
+        El juego finaliza cuando alguno de los jugadores alcanza 3 victorias o el que tenga mas partidas ganadas.
+      </li>
+    </ul>
+  </div>
+
+  <p id="saludoUsuario"></p>
+
+  <div id="botonera">
     <div id="jugadaJugador">
-        <button id="botonPiedra" value="piedra">
-            <h3>
-                Piedra
-            </h3>
-            <img src="./piedra.png" alt="">
-        </button>
+      <button id="botonPiedra" value="piedra">
+        <h3>Piedra</h3>
+        <img src="./piedra.png" alt="" />
+      </button>
 
-        <button id="botonPapel" value="papel">
-            <h3>
-                Papel
-            </h3>
-            <img src="./papel.png" alt="">
-        </button>
+      <button id="botonPapel" value="papel">
+        <h3>Papel</h3>
+        <img src="./papel.png" alt="" />
+      </button>
 
-        <button id="botonTijera" value="tijera">
-            <h3>
-                Tijera
-            </h3>
-            <img src="./tijeras.png" alt="">
-        </button>
-
+      <button id="botonTijera" value="tijera">
+        <h3>Tijera</h3>
+        <img src="./tijeras.png" alt="" />
+      </button>
     </div>
 
-    <h5 id="resultado">
-        Resultados:
-    </h5>
+  </div>
 
-    <button id="reiniciar">
-        Reiniciar
-    </button>
+  <div id="tablero">
+    <h4>Tablero</h4>
+    <table>
+      <tr>
+          <th>Computadora</th>
+          <th>Jugador</th>
+      </tr>
+      <tr>
+          <td id="computadora">0</td>
+          <td id="jugador">0</td>
+      </tr>
+    </table>
+  </div>
 
 
-    <script src="script.js"></script>
+
+
+  <div id="resultadoFinal">
+    <h2 id="resultado">Resultados:</h2>
+    <h3 id="resultado1"></h3>
+    <button id="reiniciar">Reiniciar</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
