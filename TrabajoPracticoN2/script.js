@@ -15,20 +15,23 @@ function saludarJugador() {
     nombre = document.getElementById("nombreUsuario").value;
 
     if (nombre == "" || !(isNaN(nombre))) {
-        document.getElementById("saludoUsuario").innerHTML = "Ingrese su nombre";
-
+        // document.getElementById("saludoUsuario").innerHTML = "Ingrese su nombre";
+        alert("Ingrese su nombre");
         document.getElementById("botonIniciar");
         botonera.style.display = "none";
         resultadoFinal.style.display = "none";
         portada.style.display = "block";
-        tablero.style.display = "none";
+        tablero1.style.display = "none";
+        
 
     } else {
+        
         document.getElementById("saludoUsuario").innerHTML = "Hola " + " " + nombre + " " + "empecemos a jugar!!!";
         botonera.style.display = "block";
-        portada.style.disabled = "none";
+       
         portada.style.display = "none";
-        tablero.style.display = "block";
+        tablero1.style.display = "block";
+        
 
     }
 }
@@ -68,7 +71,9 @@ function partida(eleccionJugador) {
         document.getElementById("botonTijera").disabled = true;
 
         resultadoFinal.style.display = "block"
-
+        botonera.style.display = "none";
+        tablero1.style.display = "none";
+        saludo.style.display = "none";
         console.log("contadorcPU >=3")
     } else if (contadorJugador >= 3 && contadorJugadas <= 5 && contadorCPU < contadorJugador) {
         //gana el juego el jugador
@@ -80,22 +85,36 @@ function partida(eleccionJugador) {
         document.getElementById("botonTijera").disabled = true;
 
         resultadoFinal.style.display = "block"
+        botonera.style.display = "none";
+        tablero1.style.display = "none";
+        saludo.style.display = "none";
+        
         console.log("contadorjug >=3")
     } else if (contadorJugadas > 5) {
-
+s
         document.getElementById("botonPiedra").disabled = true;
         document.getElementById("botonPapel").disabled = true;
         document.getElementById("botonTijera").disabled = true;
 
         document.getElementById("resultado1").innerHTML = "Presione el boton reiniciar para poder volver a jugar";
-        resultadoFinal.style.display = "block"
+        resultadoFinal.style.display = "block";
+        botonera.style.display = "none";
+        tablero1.style.display = "none";
+        saludo.style.display = "none";
+       
     }
 }
 
 function reiniciar() {
+
     contadorJugador = 0;
     contadorCPU = 0;
     contadorJugadas = 0;
+    document.getElementById("computadora").innerHTML = 0;
+    document.getElementById("jugador").innerHTML = 0;
+
+
+
     document.getElementById("resultado").innerHTML = "Resultado: ";
     document.getElementById("nombreUsuario").innerHTML = "";
     document.getElementById("resultado1").innerHTML = "";
@@ -103,11 +122,12 @@ function reiniciar() {
     document.getElementById("botonPiedra").disabled = false;
     document.getElementById("botonPapel").disabled = false;
     document.getElementById("botonTijera").disabled = false;
+
     botonera.style.display = "none";
     resultadoFinal.style.display = "none";
     portada.style.display = "block"
     document.getElementById("saludoUsuario").innerHTML = ""
-    tablero.style.display = "none";
+    tablero1.style.display = "none";
 }
 
 
@@ -120,13 +140,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const botonTijera = document.getElementById("botonTijera")
 
     const botonReiniciar = document.getElementById("reiniciar")
-
+    
 
     const botonera = document.getElementById("botonera");
+    botonera.style.display = "none"
+
     //saludo y portada
     const portada = document.getElementById("portada")
     portada.style.display = "block"
     //llama a todas las funciones
+
     botonIniciar.addEventListener("click", saludarJugador, true);
 
     botonPiedra.addEventListener("click", () => partida(0), true)
@@ -135,13 +158,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //boton reiniciar
     botonReiniciar.addEventListener("click", () => reiniciar(), true)
-    botonera.style.display = "none";
+    
 
 
     //Resultado Final
     resultadoFinal.style.display = "none"
 
-    //tablero de partidas
-    const tablero = document.getElementById("tablero");
-    tablero.style.display = "none"
+    //tablero1 de partidas
+    const tablero1 = document.getElementById("tablero1");
+    tablero1.style.display = "none"
+
+    
 })
